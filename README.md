@@ -1,3 +1,5 @@
-### 关于算法学习的前置知识
+### 关于算法笔试
+- 链表类：[listNode](https://github.com/YomiHub/algorithms/listNode.js)
 
-- [详见笔记](https://github.com/YomiHub/learning-code)
+
+> [更多前端学习笔记](https://github.com/YomiHub/learning-code)
