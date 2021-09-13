@@ -2,8 +2,12 @@
  * @Author: Yomi
  * @Date: 2021-09-12 11:00:09
  * @LastEditors: Yomi
- * @LastEditTime: 2021-09-12 11:06:30
+ * @LastEditTime: 2021-09-13 19:37:19
  */
+
+//给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。
+//必须在原数组上操作，不能拷贝额外的数组。
+//尽量减少操作次数
 
 /* //执行用时 :64 ms, 在所有 javascript 提交中击败了97.33%的用户
 //内存消耗 :35.8 MB, 在所有 javascript 提交中击败了26.23%的用户
@@ -228,7 +232,11 @@ var removeDuplicates = function (nums) {
   return nums.length
 }; */
 
-/* //执行用时 :76 ms, 在所有 javascript 提交中击败了20.38%的用户
+//-------------------------------------------------------------------
+//给定一个包含红色、白色和蓝色，一共 n 个元素的数组，原地对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。
+//此题中，我们使用整数 0、 1 和 2 分别表示红色、白色和蓝色
+
+//执行用时 :76 ms, 在所有 javascript 提交中击败了20.38%的用户
 //内存消耗 :34.3 MB, 在所有 javascript 提交中击败了7.82%的用户
 var sortColors = function (nums) {
   let a = 0, b = 0, c = 0, index = 0;
@@ -279,7 +287,6 @@ var sortColors = function (nums) {
 
 
 //三路快排思想，大于1的放右边，小于1的放左边，等于1的不动
-
 //执行用时 :60 ms, 在所有 javascript 提交中击败了91.42%的用户
 //内存消耗 :34.2 MB, 在所有 javascript 提交中击败了9.38%的用户
 function swap (arr, i, j) {
@@ -307,27 +314,72 @@ var sortColors = function (nums) {
 
 console.log(sortColors([2, 0, 2, 1, 1, 0]));
 
- */
 
+
+
+//-----------------------------------------------------------------
 //在未排序数组中，查找排序后第K个最大的元素（重复元素计算在内）
-//执行用时：136 ms, 在所有 JavaScript 提交中击败了16.16%的用户
-//内存消耗：38.2 MB, 在所有 JavaScript 提交中击败了97.65%的用户
-function swap (nums, a, b) {
-  let temp = nums[a];
-  nums[a] = nums[b];
-  nums[b] = temp;
+
+//冒泡排序
+//执行用时：324 ms, 在所有 JavaScript 提交中击败了5.06%的用户
+//内存消耗：38 MB, 在所有 JavaScript 提交中击败了99.47%的用户
+function bubbleSort(nums){
+  let len = nums.length;
+  for (let i = 0;i<len;i++){
+    for(let j=0; j<len-i; j++){
+    
+      if(nums[j]>nums[j+1]){
+        let temp = nums[j];
+        nums[j] = nums[j+1];
+        nums[j+1] = temp;
+      }
+
+    }
+  }
+  return nums[len-k];
 }
 
 var findKthLargest = function (nums, k) {
-  let l = nums.length;
-  for (let i = 0; i <= k; i++) {
-    for (let j = 0; j < l - i; j++) {
-      if (nums[j] > nums[j + 1]) {
-        swap(nums, j, j + 1);
-      }
-    }
-  }
-  return nums[l - k];
+  return bubbleSort(nums,k);
 };
 
 console.log(findKthLargest([3, 2, 1, 5, 6, 4], 2))
+
+//快排
+// 执行用时：108 ms, 在所有 JavaScript 提交中击败了38.17%的用户
+// 内存消耗：40.8 MB, 在所有 JavaScript 提交中击败了15.33%的用户
+
+function quickSort(nums, k) {
+  if (nums.length < 2) return nums;
+
+  var left = [],
+    right = [],
+    mid = nums.splice(Math.floor(nums.length / 2), 1);
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] > mid) {
+      left.push(nums[i]);
+    } else {
+      right.push(nums[i]);
+    }
+  }
+
+  if (left.length == k) {
+    return quickSort(left, 1); //从大到小完整排序
+  } else if (left.length > k) {
+    return quickSort(left, k);
+  } else {
+    return left.concat(mid, quickSort(right, k - left.length - 1));
+  }
+}
+
+var findKthLargest = function (nums, k) {
+  var sortArr = quickSort(nums, k);
+  return sortArr[k - 1];
+  //return nums.sort((a, b) => b - a)[k - 1];
+};
+
+
+var testArr = [3, 2, 3, 1, 2, 4, 5, 5, 6];
+
+//console.log(quickSort(testArr,2));
+console.log(findKthLargest(testArr, 4));
