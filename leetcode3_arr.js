@@ -1,15 +1,17 @@
 /*
  * @Author: Yomi
+ * @Descripttion:在leetcode学习"数组算法"
  * @Date: 2021-09-12 11:00:09
  * @LastEditors: Yomi
- * @LastEditTime: 2021-09-14 18:17:45
+ * @LastEditTime: 2021-09-15 15:12:37
  */
 
+//-----------------------------------------------------------------
 //给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。
 //必须在原数组上操作，不能拷贝额外的数组。
 //尽量减少操作次数
 
-/* //执行用时 :64 ms, 在所有 javascript 提交中击败了97.33%的用户
+//执行用时 :64 ms, 在所有 javascript 提交中击败了97.33%的用户
 //内存消耗 :35.8 MB, 在所有 javascript 提交中击败了26.23%的用户
 var moveZeroes = function (nums) {
   let count = 0;
@@ -83,11 +85,15 @@ var moveZeroes = function (nums) {
 }
 
 
-console.log(moveZeroes([0, 1, 0, 3, 12])) */
+console.log(moveZeroes([0, 1, 0, 3, 12]))
 
 
 
-/* 
+//-----------------------------------------------------------------
+//移动元素
+//给定一个数组 nums和一个值val，你需要原地移除所有数值等于val的元素，返回移除后数组的新长度。不要使用额外的数组空间，你必须在原地修改输入数组并在使用O(1)额外空间的条件下完成。元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。
+
+
 //执行用时 :64 ms, 在所有 javascript 提交中击败了77.37%的用户
 //内存消耗 :34.2 MB, 在所有 javascript 提交中击败了5.58%的用户
 var removeElement = function (nums, val) {
@@ -142,6 +148,11 @@ var removeElement = function (nums, val) {
 
 
 console.log(removeElement(nums = [3, 2, 2, 3], val = 3));
+
+
+//-----------------------------------------------------------------
+//删除排序数组中的重复项
+//给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成
 
 //执行用时 :76 ms, 在所有 javascript 提交中击败了94.62%的用户
 //内存消耗 :37.1 MB, 在所有 javascript 提交中击败了44.02%的用户
@@ -230,7 +241,8 @@ var removeDuplicates = function (nums) {
     }
   }
   return nums.length
-}; */
+};
+
 
 //-------------------------------------------------------------------
 //给定一个包含红色、白色和蓝色，一共 n 个元素的数组，原地对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。
@@ -316,7 +328,6 @@ console.log(sortColors([2, 0, 2, 1, 1, 0]));
 
 
 
-
 //-----------------------------------------------------------------
 //在未排序数组中，查找排序后第K个最大的元素（重复元素计算在内）
 
@@ -342,13 +353,11 @@ function bubbleSort(nums){
 var findKthLargest = function (nums, k) {
   return bubbleSort(nums,k);
 };
-
 console.log(findKthLargest([3, 2, 1, 5, 6, 4], 2))
 
 //快排
 // 执行用时：108 ms, 在所有 JavaScript 提交中击败了38.17%的用户
 // 内存消耗：40.8 MB, 在所有 JavaScript 提交中击败了15.33%的用户
-
 function quickSort(nums, k) {
   if (nums.length < 2) return nums;
 
@@ -377,17 +386,13 @@ var findKthLargest = function (nums, k) {
   return sortArr[k - 1];
   //return nums.sort((a, b) => b - a)[k - 1];
 };
-
-
 var testArr = [3, 2, 3, 1, 2, 4, 5, 5, 6];
-
 //console.log(quickSort(testArr,2));
 console.log(findKthLargest(testArr, 4));
 
 //堆排序
 //执行用时：88 ms, 在所有 JavaScript 提交中击败了54.34%的用户
 //内存消耗：38.8 MB, 在所有 JavaScript 提交中击败了84.08%的用户
-
 function swap(arr, i, j) {
   let temp = arr[i];
   arr[i] = arr[j];

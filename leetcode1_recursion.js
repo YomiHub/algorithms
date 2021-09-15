@@ -1,4 +1,12 @@
-/* var reverseString = function (s) {
+/*
+ * @Author: Yomi
+ * @Descripttion:在leetcode学习"算法之递归"
+ * @Date: 2021-09-13 14:15:09
+ * @LastEditors: Yomi
+ * @LastEditTime: 2021-09-15 15:00:37
+ */
+
+var reverseString = function (s) {
   printArr(0, s);
 };
 
@@ -12,8 +20,9 @@ function printArr(index, s) {
   return printArr(++index, s)
 }
 
-reverseString(s); */
+reverseString(s);
 
+//-----------------------------------------------------------------
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
@@ -25,7 +34,7 @@ reverseString(s); */
  * @param {ListNode} head
  * @return {ListNode}
  */
-/* listNode = {
+listNode = {
   val: 1,
   next: {
     val: 2,
@@ -36,11 +45,6 @@ reverseString(s); */
   }
 }
 
-var swapPairs = function (head) {
-  return swap(head);
-};
-
-console.log(swapPairs(listNode));
 function swap(head) {
   if (!head || !head.next) {
     return head
@@ -51,11 +55,18 @@ function swap(head) {
   return tempHead
 }
 
+var swapPairs = function (head) {
+  return swap(head);
+};
 
- */
+console.log(swapPairs(listNode));
 
 
-/* var generate = function (numRows) {
+
+
+
+//-----------------------------------------------------------------
+var generate = function (numRows) {
   console.log(createArr([], 0, numRows));
 };
 
@@ -77,9 +88,11 @@ function createArr(arr, i, len) {
   }
 }
 
-generate(5); */
+generate(5);
 
 
+//-----------------------------------------------------------------
+//反转一个单链表
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
@@ -88,8 +101,7 @@ generate(5); */
  * }
  */
 
-
-/* var head = {
+var head = {
   val: 1,
   next: {
     val: 2,
@@ -98,13 +110,13 @@ generate(5); */
       next: null
     }
   }
-} */
+}
 
 /**
  * @param {ListNode} head
  * @return {ListNode}
  */
-/* var newList = null;
+var newList = null;
 var reverseList = function (head) {
   var pre = null;
   while (head) {
@@ -116,10 +128,10 @@ var reverseList = function (head) {
   return pre;
 };
 
-console.log(reverseList(head)); */
+console.log(reverseList(head));
 
-
-/* //对应同步的操作 fs.mkdirSync(path.join(__dirname,'test2'));
+//-----------------------------------------------------------------
+//对应同步的操作 fs.mkdirSync(path.join(__dirname,'test2'));
 const path = require("path");
 const fs = require("fs");
 
@@ -127,9 +139,12 @@ fs.rmdir(path.join(__dirname, 'test'), (err) => {
   console.log(err);  //打印null表示成功删除
 })
 
-//对应的同步方法 fs.rmdirSync(path.join(__dirname, 'test'));   */
+//对应的同步方法 fs.rmdirSync(path.join(__dirname, 'test'));  
 
-/* var fib = function (N) {
+
+//-----------------------------------------------------------------
+// 斐波那契数列:该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和
+var fib = function (N) {
   var obj = {};
   return fibCal(N, obj)
 };
@@ -155,6 +170,9 @@ function fibCal(n, obj) {
 
 console.log(fib(3));
 
+
+//-----------------------------------------------------------------
+// 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
 var climbStairs = function (n) {
   var obj = {};
   return climbCal(n, obj);
@@ -179,8 +197,11 @@ function climbCal(n, obj) {
 }
 
 console.log(climbStairs(5))
- */
 
+
+//-----------------------------------------------------------------
+//二叉树：给定一个二叉树，找出其最大深度。即二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。 
+//说明: 叶子节点是指没有子节点的节点。
 const root = {
   val: 1,
   left: {
@@ -208,7 +229,7 @@ const root = {
 }
 
 // DFS（深度优先搜索）策略
-/* var maxDepth = function (root) {
+var maxDepth = function (root) {
   if (root === null) {
     return 0;
   } else {
@@ -216,11 +237,11 @@ const root = {
     let rightLen = maxDepth(root.right);
     return Math.max(leftLen, rightLen) + 1;
   }
-}; */
+};
 
 
 
-/* var maxDepth = function (root) {
+var maxDepth = function (root) {
   if (root === null) return 0;
   let depth = 1;
   let stack = [root];
@@ -249,10 +270,13 @@ function getNotArrivedChild(root) {
   return null;
 }
 
-console.log(maxDepth(root)); */
+console.log(maxDepth(root));
 
+
+//-----------------------------------------------------------------
+//实现 pow(x, n) ，即计算 x 的 n 次幂函数。
 //方法一：暴力循环
-/* var myPow = function (x, n) {
+var myPow = function (x, n) {
   var result = 1;
   if (n < 0) {
     n = -n;
@@ -263,10 +287,10 @@ console.log(maxDepth(root)); */
     result = result * x;
   }
   return result;
-}; */
+};
 
 //方法二：递归快速幂算法
-/* 
+
   var myPow = function (x, n) {
   const fastPow = (x, n) => {
     if (n == 1) { return x };
@@ -279,11 +303,11 @@ console.log(maxDepth(root)); */
   }
 
   return n < 0 ? 1 / fastPow(x, Math.abs(n)) : fastPow(x, n);
-} */
+}
 
 
 //分治、递归
-/* var myPow = function (x, n) {
+var myPow = function (x, n) {
   //临界条件
   if (n === 0) return 1;
   if (x === 0) return 0;
@@ -294,8 +318,11 @@ console.log(maxDepth(root)); */
   return myPow(x * x, n / 2);
 };
 
-console.log(myPow(2, 5)); */
+console.log(myPow(2, 5));
 
+
+//-----------------------------------------------------------------
+//两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
 const list1 = {
   val: 1,
   next: {
@@ -320,7 +347,7 @@ const list2 = {
 
 //执行用时 :80 ms, 在所有 javascript 提交中击败了53.05%的用户
 //内存消耗 :35.7 MB, 在所有 javascript 提交中击败了22.92%的用户
-/* 
+
 var mergeTwoLists = function (l1, l2) {
   if (l1 === null) {
     return l2;
@@ -338,12 +365,12 @@ var mergeTwoLists = function (l1, l2) {
 function ListNode(val) {
   this.val = val;
   this.next = null;
-} */
+}
 
 
 //执行用时 :76 ms, 在所有 javascript 提交中击败了71.00%的用户
 //内存消耗 :35.5 MB, 在所有 javascript 提交中击败了39.88%的用户
-/* var mergeTwoLists = function (l1, l2) {
+var mergeTwoLists = function (l1, l2) {
   var prehead = new ListNode();
   var prev = prehead;
 
@@ -362,10 +389,13 @@ function ListNode(val) {
   return prehead.next;
 };
 
-console.log(JSON.stringify(mergeTwoLists(list1, list2))); */
+console.log(JSON.stringify(mergeTwoLists(list1, list2)));
 
 
-/* var kthGrammar = function (N, K) {
+//-----------------------------------------------------------------
+//第K个语法符号
+//在第一行我们写上一个 0。接下来的每一行，将前一行中的0替换为01，1替换为10。 给定行数 N 和序数 K，返回第 N 行中第 K个字符。（K从1开始）
+var kthGrammar = function (N, K) {
   return getArrs(N)[K - 1];
 };
 
@@ -386,20 +416,20 @@ function getArrs(n) {
     });
   }
   return arr;  //字符串的长度可能有 10 亿左右，因为每一行的长度都是前一行的两倍，所以这种方法不够高效
-} */
+}
 
 
 
 //执行用时 :72 ms, 在所有 javascript 提交中击败了29.88%的用户
 //内存消耗 :33.6 MB, 在所有 javascript 提交中击败了40.00%的用户
-/* var kthGrammar = function (N, K) {
+var kthGrammar = function (N, K) {
   if (N == 1) { return 0; }
   return (~K & 1) ^ kthGrammar(N - 1, (K + 1) / 2);
-}; */
+};
 
 //执行用时 :76 ms, 在所有 javascript 提交中击败了22.99%的用户
 //内存消耗 :34.1 MB, 在所有 javascript 提交中击败了20.00%的用户
-/* var kthGrammar = function (N, K) {
+var kthGrammar = function (N, K) {
   if (K === 1) {
     return 0;
   }
@@ -414,11 +444,14 @@ function getArrs(n) {
   }
   return K % 2 === 0 ? 0 : 1;
 }
-console.log(kthGrammar(2, 1)); */
+console.log(kthGrammar(2, 1));
 
-//js
+
+
+//-----------------------------------------------------------------
+//二叉搜索树：给定一个整数 n，生成所有由 1 ... n 为节点所组成的二叉搜索树
 //找到不同的根，生成左右两个集合进行组合
-/* var generateTrees = function (n) {
+var generateTrees = function (n) {
   if (n === 0) return [];
   return generateTrees(1, n);
 
@@ -449,33 +482,5 @@ function TreeNode(val) {
   this.val = val;
   this.left = this.right = null;
 }
-
-var generateTrees = function (n) {
-  if (n === 0) { return []; }
-  return getTree(1, n);
-
-  function getTree(start, end) {
-    var res = [];
-    if (start > end) {
-      res.push(null);
-      return res;
-    }
-
-    for (var i = start; i <= end; i++) {
-      var left = getTree(start, i - 1);
-      var right = getTree(i + 1, end);
-
-      for (var l = 0; l < left.length; l++) {
-        for (var r = 0; r < right.length; r++) {
-          var newNode = new TreeNode(i);
-          newNode.left = left[l];
-          newNode.right = right[r];
-          res.push(newNode);
-        }
-      }
-    }
-    return res;
-  }
-} */
 
 var arr1 = [1, 2, 2, 1], arr2 = [2, 2];

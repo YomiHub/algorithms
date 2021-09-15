@@ -1,9 +1,17 @@
+/*
+ * @Author: Yomi
+ * @Descripttion:在leetcode学习"查找表类算法"
+ * @Date: 2021-09-13 14:15:09
+ * @LastEditors: Yomi
+ * @LastEditTime: 2021-09-15 15:06:58
+ */
 
-//查找表类算法
+//-----------------------------------------------------------------
+//两个数组的交集:给定两个数组，编写一个函数来计算它们的交集
 
 //执行用时 :72 ms, 在所有 javascript 提交中击败了57.01%的用户
 //内存消耗 :33.7 MB, 在所有 javascript 提交中击败了93.20%的用户
-/* var intersection = function (nums1, nums2) {
+var intersection = function (nums1, nums2) {
   var result = [];
   nums1.forEach(item => {
     if (nums2.includes(item) && !result.includes(item)) {
@@ -11,12 +19,12 @@
     }
   });
   return result;
-}; */
+};
 
 
 //执行用时 :56 ms, 在所有 javascript 提交中击败了99.29%的用户
 //内存消耗 :34 MB, 在所有 javascript 提交中击败了71.43%的用户
-/* var intersection = function (nums1, nums2) {
+var intersection = function (nums1, nums2) {
   const set = new Set();
   nums1.forEach(num1 => {
     if (nums2.includes(num1)) {
@@ -24,36 +32,39 @@
     }
   });
   return [...set]
-}; */
+};
 
 //执行用时 :56 ms, 在所有 javascript 提交中击败了99.29%的用户
 //内存消耗 :34.7 MB, 在所有 javascript 提交中击败了40.82%的用户
-/* var intersection = function (nums1, nums2) {
+var intersection = function (nums1, nums2) {
   nums1 = Array.from(new Set(nums1));
   let result = nums1.filter(item => {
     return nums2.includes(item);
   });
   return result;
-}; */
+};
 
 
 
 //执行用时 :72 ms, 在所有 javascript 提交中击败了57.01%的用户
 //内存消耗 :34.4 MB, 在所有 javascript 提交中击败了58.17%的用户
-/* var intersection = function (nums1, nums2) {
+var intersection = function (nums1, nums2) {
   return [... new Set(nums1.filter(item => nums2.includes(item)))]
 };
- */
+
 //执行用时 :72 ms, 在所有 javascript 提交中击败了57.01%的用户
 //内存消耗 :34.1 MB, 在所有 javascript 提交中击败了66.67%的用户
-/* var intersection = function (nums1, nums2) {
+var intersection = function (nums1, nums2) {
   const set = new Set(nums1);
   return Array.from(new Set(nums2.filter(num => set.has(num))));
 };
 console.log(intersection(arr1, arr2));
-*/
 
-/*
+
+//-----------------------------------------------------------------
+//判断一个数是不是“快乐数”:对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和，然后重复这个过程直到这个数变为 1，也可能是无限循环但始终变不到 1。如果可以变为 1，那么这个数就是快乐数
+//关键：判断出现的数之前有没有出现过，出现过就会产生循环，就不是快乐数。
+
 var isHappy = function (n) {
   var sum = 0;
   var resSet = new Set();
@@ -93,11 +104,10 @@ function getSquare(arr) {
     return sum += item * item;
   })
   return sum;
-} */
+}
 
 
 //判断出现的数之前有没有出现过，出现过就会产生循环，就不是快乐数。可以用集合 set 来记录之前出现的数字。
-/*
 
 //执行用时 :76 ms, 在所有 javascript 提交中击败了66.78%的用户
 //内存消耗 :34.6 MB, 在所有 javascript 提交中击败了87.73%的用户
@@ -118,12 +128,12 @@ var isHappy = function (n) {
     resSet.add(sum);
     n = sum;
   }
-}; */
+};
 
 
 //执行用时 :64 ms, 在所有 javascript 提交中击败了97.09%的用户
 //内存消耗 :36.2 MB, 在所有 javascript 提交中击败了25.15%的用户
-/* var isHappy = function (n) {
+var isHappy = function (n) {
   var loopArr = []
   while (n !== 1) {
     var arr = []
@@ -142,11 +152,17 @@ var isHappy = function (n) {
 
 };
 
-console.log(isHappy(19)); */
+console.log(isHappy(19));
+
+
+
+//-----------------------------------------------------------------
+//存在重复元素
+//给定一个整数数组，判断是否存在重复元素。如果任何值在数组中出现至少两次，函数返回 true。如果数组中每个元素都不相同，则返回 false
 
 //执行用时 :68 ms, 在所有 javascript 提交中击败了95.59%的用户
 //内存消耗 :40.6 MB, 在所有 javascript 提交中击败了41.49%的用户
-/* var containsDuplicate = function (nums) {
+var containsDuplicate = function (nums) {
   var arrSet = new Set();
   var res = false;
   nums.forEach(item => {
@@ -156,12 +172,12 @@ console.log(isHappy(19)); */
     arrSet.add(item);
   });
   return res;
-}; */
+};
 
 
 //执行用时 :76 ms, 在所有 javascript 提交中击败了84.89%的用户
 //内存消耗 :42.1 MB, 在所有 javascript 提交中击败了34.27%的用户
-/* var containsDuplicate = function (nums) {
+var containsDuplicate = function (nums) {
   let obj = {}
   for (let i = 0, length = nums.length; i < length; i++) {
     if (obj[nums[i]]) return true
@@ -180,12 +196,12 @@ var containsDuplicate = function (nums) {
   // const map = new Map()
   // nums.forEach((item, key) => map.set(item, key))
   // return map.size !== nums.length
-}; */
+};
 
 
 
 //先排序再比较相邻元素
-/* var containsDuplicate = function (nums) {
+var containsDuplicate = function (nums) {
   const len = nums.length;
   if (len < 2) {
     return false;
@@ -203,12 +219,14 @@ var containsDuplicate = function (nums) {
   return false;
 }
 
-console.log(containsDuplicate([1, 2, 3, 4])); */
+console.log(containsDuplicate([1, 2, 3, 4]));
 
 
+//-----------------------------------------------------------------
+//两个数组的交集
 // 执行用时 :68 ms, 在所有 javascript 提交中击败了82.19%的用户
 // 内存消耗 :36 MB, 在所有 javascript 提交中击败了12.23%的用户
-/* var intersect = function (nums1, nums2) {
+var intersect = function (nums1, nums2) {
   var obj1 = arrChange(nums1);
   var obj2 = arrChange(nums2);
   var res = [];
@@ -230,11 +248,11 @@ function arrChange(arr) {
     }
   })
   return obj;
-} */
+}
 
 //执行用时 :76 ms, 在所有 javascript 提交中击败了52.47%的用户
 //内存消耗 :34.7 MB, 在所有 javascript 提交中击败了50.79%的用户
-/* var intersect = function (nums1, nums2) {
+var intersect = function (nums1, nums2) {
   var len1 = nums1.length;
   var len2 = nums2.length;
   if (len1 === 0 || len2 === 0) {
@@ -259,12 +277,12 @@ function arrChange(arr) {
   })
 
   return result;
-} */
+}
 
 
 //执行用时 :72 ms, 在所有 javascript 提交中击败了66.52%的用户
 //内存消耗 :33.9 MB, 在所有 javascript 提交中击败了72.60%的用户
-/* var intersect = function (nums1, nums2) {
+var intersect = function (nums1, nums2) {
   return nums1.filter(el => nums2.includes(el) && nums2.splice(nums2.indexOf(el), 1))
 };
 
@@ -282,13 +300,13 @@ var intersect = function(nums1, nums2) {
   }
   return res;
 };
-console.log(intersect([1, 2, 2, 1], [2, 2])); */
+console.log(intersect([1, 2, 2, 1], [2, 2]));
 
 //执行用时 :88 ms, 在所有 javascript 提交中击败了68.61%的用户
 //内存消耗 :38.2 MB, 在所有 javascript 提交中击败了39.81%的用户
 
 //字典对各个字符出现的次数进行统计
-/* var isAnagram = function (s, t) {
+var isAnagram = function (s, t) {
   if (s.length != t.length) {
     return false;
   }
@@ -313,12 +331,14 @@ function cal(str) {
     }
   }
   return times;
-} */
+}
 
 
+
+//-----------------------------------------------------------------
+//有效的字母异位词:给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词
 
 //转换成数组排序后对比
-
 //执行用时 :116 ms, 在所有 javascript 提交中击败了48.25%的用户
 //内存消耗 :38.6 MB, 在所有 javascript 提交中击败了28.30%的用户
 var isAnagram = function (s, t) {
@@ -329,7 +349,7 @@ var isAnagram = function (s, t) {
 
 //执行用时 :132 ms, 在所有 javascript 提交中击败了26.88%的用户
 //内存消耗 :38.1 MB, 在所有 javascript 提交中击败了43.10%的用户
-/* var isAnagram = function (s, t) {
+var isAnagram = function (s, t) {
   return s.split('').sort().join('') === t.split('').sort().join('')
 };
 
@@ -338,9 +358,14 @@ var isAnagram = function (s, t) {
     .sort((a, b) => a.charCodeAt() - b.charCodeAt())
     .join('')
   return sort(s) === sort(t)   //如果输入字符串包含 unicode 字符
-}; */
+};
 
-/*
+
+//-----------------------------------------------------------------
+//同构字符串
+//如果 s 中的字符可以被替换得到 t ，那么这两个字符串是同构的。
+//所有出现的字符都必须用另一个字符替换，同时保留字符的顺序。两个字符不能映射到同一个字符上，但字符可以映射自己本身
+
 var isIsomorphic = function (s, t) {
   var sArr = s.split('');
   var record = {};
@@ -366,11 +391,11 @@ function repalaceStr(arr, oldStr, newStr) {
     arr.splice(arr.indexOf(oldStr), 1, newStr);
   }
   return arr;
-} */
+}
 
 //执行用时 :60 ms, 在所有 javascript 提交中击败了99.19%的用户
 //内存消耗 :35.3 MB, 在所有 javascript 提交中击败了66.33%的用户
-/* var isIsomorphic = function (s, t) {
+var isIsomorphic = function (s, t) {
   if (s.length != t.length) {
     return false;
   }
@@ -449,12 +474,14 @@ var isIsomorphic = function (s, t) {
 };
 console.log(isIsomorphic("paper", "title"))
 
- */
 
+//-----------------------------------------------------------------
+//根据字符出现频率排序
+//给定一个字符串，请将字符串里的字符按照出现的频率降序排列
 
 //执行用时 :100 ms, 在所有 javascript 提交中击败了40.40%的用户
 //内存消耗 :44.6 MB, 在所有 javascript 提交中击败了10.81%的用户
-/* var frequencySort = function (s) {
+var frequencySort = function (s) {
   var calTimes = {};
   for (let str of s) {
     if (!calTimes.hasOwnProperty(str)) {
@@ -516,9 +543,12 @@ var frequencySort = function (s) {
     record.set(value, (record.get(value) || 0) + 1)
   })
   return sArr.sort((a, b) => record.get(b) == record.get(a) ? a.charCodeAt(0) - b.charCodeAt(0) : record.get(b) - record.get(a)).join('');
-}; */
+}; 
 
-/*
+
+//-----------------------------------------------------------------
+//两数之和
+//给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。
 var twoSum = function (nums, target) {
   var res = [];
   for (let i = 0; i < nums.length; i++) {
@@ -567,9 +597,13 @@ var twoSum = function (nums, target) {
       return [i, j];
     }
   }
-}; */
+};
 
-/*
+
+
+//-----------------------------------------------------------------
+//三数之和
+//给定一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？找出所有满足条件且不重复的三元组。注意：答案中不可以包含重复的三元组。
 
 //超时：311 / 313 个通过测试用例
 var threeSum = function (nums) {
@@ -592,13 +626,13 @@ var threeSum = function (nums) {
     }
   }
   return res;
-}; */
+};
 
 //双指针
 
 //执行用时 :196 ms, 在所有 javascript 提交中击败了68.70%的用户
 //内存消耗 :46.8 MB, 在所有 javascript 提交中击败了57.55%的用户
-/* var threeSum = function (nums) {
+var threeSum = function (nums) {
   if (!nums || nums.length < 3) return [];
   nums.sort((a, b) => { return a - b; });
 
@@ -629,11 +663,16 @@ var threeSum = function (nums) {
 };
 
 
-console.log(threeSum([-1, 0, 1, 2, -1, -4])); */
+console.log(threeSum([-1, 0, 1, 2, -1, -4]));
+
+
+//-----------------------------------------------------------------
+//四数之和
+//给定一个包含 n 个整数的数组 nums 和一个目标值 target，判断 nums 中是否存在四个元素 a，b，c 和 d ，使得 a + b + c + d 的值与 target 相等？找出所有满足条件且不重复的四元组。注意：答案中不可以包含重复的四元组
 
 //执行用时 :96 ms, 在所有 javascript 提交中击败了95.30%的用户
 //内存消耗 :37.1 MB, 在所有 javascript 提交中击败了42.64%的用户
-/*
+
 var fourSum = function (nums, target) {
   if (!nums || nums.length < 4) return [];
   nums.sort((a, b) => { return a - b; });
@@ -728,11 +767,16 @@ var fourSum = function (nums, target) {
 };
 
 
-console.log(fourSum([0, 0, 0, 0], 0)); */
+console.log(fourSum([0, 0, 0, 0], 0));
+
+
+//-----------------------------------------------------------------
+//四数相加
+//给定四个包含整数的数组列表 A , B , C , D ,计算有多少个元组 (i, j, k, l) ，使得 A[i] + B[j] + C[k] + D[l] = 0。为了使问题简单化，所有的 A, B, C, D 具有相同的长度 N，且 0 ≤ N ≤ 500 。所有整数的范围在 -228 到 228 - 1 之间，最终结果不会超过 231 - 1
 
 //执行用时 :144 ms, 在所有 javascript 提交中击败了81.95%的用户
 //内存消耗 :51.3 MB, 在所有 javascript 提交中击败了69.23%的用户
-/* var fourSumCount = function (A, B, C, D) {
+var fourSumCount = function (A, B, C, D) {
   let sumMap = new Map();
   let count = 0;
 
@@ -776,10 +820,14 @@ var fourSumCount = function (A, B, C, D) {
     }
   }
   return res;
-}; */
+};
 
 
-/* //执行用时 :156 ms, 在所有 javascript 提交中击败了62.75%的用户
+//-----------------------------------------------------------------
+//字母异位词分组
+//给定一个字符串数组，将字母异位词组合在一起。字母异位词指字母相同，但排列不同的字符串。说明：所有输入均为小写字母且不考虑答案输出的顺序。
+
+//执行用时 :156 ms, 在所有 javascript 提交中击败了62.75%的用户
 //内存消耗 :45.7 MB, 在所有 javascript 提交中击败了55.43%的用户
 var groupAnagrams = function (strs) {
   var tag = {};
@@ -818,11 +866,15 @@ const groupAnagrams = function (strs) {
 
 
 console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
- */
+
+
+//-----------------------------------------------------------------
+//回旋镖的数量
+//给定平面上 n 对不同的点，“回旋镖” 是由点表示的元组 (i, j, k) ，其中 i 和 j 之间的距离和 i 和 k 之间的距离相等（需要考虑元组的顺序）。找到所有回旋镖的数量。你可以假设 n 最大为 500，所有点的坐标在闭区间 [-10000, 10000] 中
 
 //执行用时 :180 ms, 在所有 javascript 提交中击败了89.47%的用户
 //内存消耗 :41.7 MB, 在所有 javascript 提交中击败了59.38%的用户
-/* var numberOfBoomerangs = function (points) {
+var numberOfBoomerangs = function (points) {
   var len = points.length;
 
   var count = 0;
@@ -850,11 +902,14 @@ function getDis(point1, point2) {
 
 console.log(numberOfBoomerangs([[0, 0], [1, 0], [-1, 0], [0, 1], [0, -1]]))
 
- */
+
+
+//-----------------------------------------------------------------
+//直线上最多的点数:给定一个二维平面，平面上有 n 个点，求最多有多少个点在同一条直线上。
 
 //执行用时 :1816 ms, 在所有 javascript 提交中击败了7.32%的用户
 //内存消耗 :85.7 MB, 在所有 javascript 提交中击败了10.00%的用户
-/* var maxPoints = function (points) {
+var maxPoints = function (points) {
   var len = points.length;
   var res = 0;
   if (len < 3) {
@@ -989,9 +1044,15 @@ var maxPoints = function (points) {
   return result;
 };
 
-console.log(maxPoints([[0, 0], [94911151, 94911150], [94911152, 94911151]])) */
+console.log(maxPoints([[0, 0], [94911151, 94911150], [94911152, 94911151]]))
 
-/* //执行用时 :1840 ms, 在所有 javascript 提交中击败了13.58%的用户
+
+
+//-----------------------------------------------------------------
+//存在重复元素 II
+//给定一个整数数组和一个整数 k，判断数组中是否存在两个不同的索引 i 和 j，使得 nums [i] = nums [j]，并且 i 和 j 的差的绝对值最大为 k
+
+//执行用时 :1840 ms, 在所有 javascript 提交中击败了13.58%的用户
 //内存消耗 :36.2 MB, 在所有 javascript 提交中击败了61.16%的用户
 var containsNearbyDuplicate = function (nums, k) {
   for (let i = 0; i < nums.length; i++) {
@@ -1065,11 +1126,18 @@ var containsNearbyDuplicate = function (nums, k) {
   }
   return false;
 };
-console.log(containsNearbyDuplicate([1, 2, 3, 1, 2, 3], 2)) */
+console.log(containsNearbyDuplicate([1, 2, 3, 1, 2, 3], 2))
+
+
+
+//-----------------------------------------------------------------
+//存在重复元素 III
+//给定一个整数数组，判断数组中是否有两个不同的索引 i 和 j，使得 nums [i] 和 nums [j] 的差的绝对值最大为 t，并且 i 和 j 之间的差的绝对值最大为 ķ
+
 
 //执行用时 :260 ms, 在所有 javascript 提交中击败了64.52%的用户
 //内存消耗 :35.4 MB, 在所有 javascript 提交中击败了29.63%的用户
-/* var containsNearbyAlmostDuplicate = function (nums, k, t) {
+var containsNearbyAlmostDuplicate = function (nums, k, t) {
   let len = nums.length;
   if (len <= 1) return false;
   var res = [];
@@ -1129,12 +1197,13 @@ var containsNearbyAlmostDuplicate = function (nums, k, t) {
 };
 
 console.log(containsNearbyAlmostDuplicate(nums = [1, 5, 9, 1, 5, 9], k = 2, t = 3))
- */
 
+
+//-----------------------------------------------------------------
 //!无重复字符的最长子串:给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度
 //维护数组：使用一个数组来维护滑动窗口 时间复杂度：O(n<sup>2</sup>)
 //循环字符，将唯一的字符放入数组，非唯一时，移除包括重复字符之前的所有字符，接着比较数组长度与最长的长度
-/* var lengthOfLongestSubstring = function(s) {
+var lengthOfLongestSubstring = function(s) {
   let arr = [], max=0;  //需要比较大小，先设置max默认为0
   for(let i = 0; i<s.length; i++){
     let index = arr.indexOf(s[i]); //前面是否已经出现过该字符
@@ -1145,10 +1214,10 @@ console.log(containsNearbyAlmostDuplicate(nums = [1, 5, 9, 1, 5, 9], k = 2, t = 
     max = Math.max(arr.length,max);
   }
   return max;
-}; */
+};
 
 //维护下标： 使用下标来维护滑动窗口（将上述的数组长度变为两个下标变量的差值） 时间复杂度：O(n<sup>2</sup>)
-/* var lengthOfLongestSubstring = function(s) {
+var lengthOfLongestSubstring = function(s) {
   let index = 0, max = 0;
   for(let i = 0,j = 0; j<s.length; j++){
     index = s.substring(i,j).indexOf(s[j]);
@@ -1159,7 +1228,7 @@ console.log(containsNearbyAlmostDuplicate(nums = [1, 5, 9, 1, 5, 9], k = 2, t = 
     max = Math.max(max,j-i+1)
   }
   return max;
-} */
+}
 
 //结合Map优化时间复杂度：O(n)
 var lengthOfLongestSubstring = function(s){
