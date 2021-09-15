@@ -1,7 +1,7 @@
 /*
  * @Date: 2021-01-04 15:37:04
  * @LastEditors: Yomi
- * @LastEditTime: 2021-09-14 18:14:58
+ * @LastEditTime: 2021-09-15 18:26:09
  */
 
 function swap(arr, i, j) {
@@ -10,6 +10,7 @@ function swap(arr, i, j) {
   arr[j] = temp;
 }
 
+//-----------------------------------------------------------------
 //堆排
 function heapSort(arr) {
   //初始化大顶堆，得到第一个为最大元素，从第一个非叶子结点开始（性质：叶子结点总数n0是度为2的非叶子结点个数n2加一）
@@ -52,7 +53,44 @@ var findKthLargest = function (nums, k) {
   return sortArr[k - 1];
 };
 
-const array = [1, 2, 5, 3, 2, 4, 6, 8, 5, 9];
+//-----------------------------------------------------------------
+//归并排
+const merge = function (left, right) {
+  let result = [];
+
+  while (left.length && right.length) {
+    if (left[0] <= right[0]) {
+      result.push(left.shift());
+    } else {
+      result.push(right.shift());
+    }
+  }
+
+  while (left.length) {
+    result.push(left.shift());
+  }
+
+  while (right.length) {
+    result.push(right.shift());
+  }
+
+  console.log("结束", result);
+  return result;
+};
+
+const mergeSort = function (arr) {
+  const len = arr.length;
+  if (len < 2) {
+    return arr;
+  }
+
+  let middle = Math.floor(len / 2),
+    left = arr.slice(0, middle),
+    right = arr.slice(middle);
+  return merge(mergeSort(left), mergeSort(right));
+};
+
+const array = [1,2,5,3,2,4,6,8,5,9];
 console.log("原始array:", array);
-const newArr = heapSort(array);
+const newArr = mergeSort(array);
 console.log("newArr:", newArr);
