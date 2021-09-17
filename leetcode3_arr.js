@@ -2,8 +2,8 @@
  * @Author: Yomi
  * @Descripttion:在leetcode学习"数组算法"
  * @Date: 2021-09-12 11:00:09
- * @LastEditors: Yomi
- * @LastEditTime: 2021-09-15 15:12:37
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-09-17 10:46:34
  */
 
 //-----------------------------------------------------------------
@@ -444,3 +444,4 @@ const array = [1, 2, 5, 3, 2, 4, 6, 8, 5, 9];
 console.log("原始array:", array);
 const newArr = heapSort(array);
 console.log("newArr:", newArr);
+

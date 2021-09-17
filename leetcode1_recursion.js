@@ -2,148 +2,15 @@
  * @Author: Yomi
  * @Descripttion:在leetcode学习"算法之递归"
  * @Date: 2021-09-13 14:15:09
- * @LastEditors: Yomi
- * @LastEditTime: 2021-09-15 15:00:37
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-09-17 14:59:22
  */
-
-var reverseString = function (s) {
-  printArr(0, s);
-};
-
-function printArr(index, s) {
-  if (s == null || index > s.length - 2) {
-    console.log(s);
-    return;
-  }
-
-  s.splice(index, 0, s.splice(s.length - 1, 1).toString());
-  return printArr(++index, s)
-}
-
-reverseString(s);
-
-//-----------------------------------------------------------------
-/**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
- */
-/**
- * @param {ListNode} head
- * @return {ListNode}
- */
-listNode = {
-  val: 1,
-  next: {
-    val: 2,
-    next: {
-      val: 3,
-      next: null
-    }
-  }
-}
-
-function swap(head) {
-  if (!head || !head.next) {
-    return head
-  }
-  let tempHead = head.next
-  head.next = swapPairs(head.next.next)
-  tempHead.next = head
-  return tempHead
-}
-
-var swapPairs = function (head) {
-  return swap(head);
-};
-
-console.log(swapPairs(listNode));
-
-
-
-
-
-//-----------------------------------------------------------------
-var generate = function (numRows) {
-  console.log(createArr([], 0, numRows));
-};
-
-function createArr(arr, i, len) {
-  if (i < len) {
-    var temp = [];
-    for (let j = 0; j < i + 1; j++) {
-      if (j == 0 || j == i) {
-        temp.push(1)
-      } else {
-        temp.push(arr[i - 1][j - 1] + arr[i - 1][j])
-      }
-    }
-    arr.push(temp);
-    console.log(arr);
-    return createArr(arr, ++i, len);
-  } else {
-    return arr[i-1];
-  }
-}
-
-generate(5);
-
-
-//-----------------------------------------------------------------
-//反转一个单链表
-/**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
- */
-
-var head = {
-  val: 1,
-  next: {
-    val: 2,
-    next: {
-      val: 3,
-      next: null
-    }
-  }
-}
-
-/**
- * @param {ListNode} head
- * @return {ListNode}
- */
-var newList = null;
-var reverseList = function (head) {
-  var pre = null;
-  while (head) {
-    var next = head.next;
-    head.next = pre;
-    pre = head;
-    head = next;
-  }
-  return pre;
-};
-
-console.log(reverseList(head));
-
-//-----------------------------------------------------------------
-//对应同步的操作 fs.mkdirSync(path.join(__dirname,'test2'));
-const path = require("path");
-const fs = require("fs");
-
-fs.rmdir(path.join(__dirname, 'test'), (err) => {
-  console.log(err);  //打印null表示成功删除
-})
-
-//对应的同步方法 fs.rmdirSync(path.join(__dirname, 'test'));  
-
 
 //-----------------------------------------------------------------
 // 斐波那契数列:该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和
+//F(0) = 0，F(1) = 1
+//F(n) = F(n - 1) + F(n - 2)，其中 n > 1
+//给你 n ，请计算 F(n) 。
 var fib = function (N) {
   var obj = {};
   return fibCal(N, obj)
@@ -170,6 +37,18 @@ function fibCal(n, obj) {
 
 console.log(fib(3));
 
+
+ 
+/* 
+示例 1：
+
+输入：2
+输出：1
+解释：F(2) = F(1) + F(0) = 1 + 0 = 1
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/fibonacci-number
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。 */
 
 //-----------------------------------------------------------------
 // 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
