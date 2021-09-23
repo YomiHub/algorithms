@@ -2,8 +2,8 @@
  * @Author: Yomi
  * @Descripttion:在leetcode学习"查找表类算法"
  * @Date: 2021-09-13 14:15:09
- * @LastEditors: Yomi
- * @LastEditTime: 2021-09-15 15:06:58
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-09-23 13:53:32
  */
 
 //-----------------------------------------------------------------
@@ -18,6 +18,7 @@ var intersection = function (nums1, nums2) {
       result.push(item);
     }
   });
+  
   return result;
 };
 
