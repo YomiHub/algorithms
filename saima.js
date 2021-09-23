@@ -1,5 +1,4 @@
-/*
-//!逆序处理字符串奇数位和偶数位数字
+//逆序处理字符串奇数位和偶数位数字
 var line;
 while (line = read_line()) {
   var len = line.length;
@@ -24,11 +23,11 @@ function cul (line, len) {
   }
   // console.log(count);
   return count % 10 == 0 ? 'ok' : 'error';
-} */
-/*
+}
 
 
-//!合并集合
+
+//合并集合
 //输入
 // 多组（不超过 5 组）数据。
 
@@ -69,10 +68,10 @@ function getAll (aArr, bArr) {
   });
 
   return result.join(' ');
-} */
+} 
 
 
-//!预测购买商品总花费的最小和最大值
+//预测购买商品总花费的最小和最大值
 var input;
 while (input = read_line()) {
   var n = +input.split(' ')[0];  //商品价格标签数

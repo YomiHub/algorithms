@@ -1,4 +1,5 @@
-/* process.stdin.resume();
+//-----------------------------------------------------------------
+process.stdin.resume();
 process.stdin.setEncoding('ascii');
 var input = "";
 var input_array = "";
@@ -87,9 +88,10 @@ function getMin(arr) {
 function replaceStr(str, index, newstr) {
   let spliceStr = str.substring(0, index) + newstr + str.substring(index + 1);
   return spliceStr;
-} */
+} 
 
-/* var sourceStr = "@!%12dgsa";
+//-----------------------------------------------------------------
+var sourceStr = "@!%12dgsa";
 var compareStr = "010111100";
 
 console.log(predict(sourceStr, compareStr));
@@ -112,12 +114,11 @@ function predict(sourceStr, compareStr) {
     }
   }
   return (count / result.length * 100).toFixed(2) + "%";
-} */
+} 
 
-
-
+//-----------------------------------------------------------------
 //?将32位的十进制数转为2进制数
-/* var num = parseInt(readline());
+var num = parseInt(readline());
 var reverse = num;  //余数
 var res = [];  //二进制
 
@@ -130,10 +131,11 @@ while (num >= 2) {
 res.push(num);
 console.log(res.filter(item => {
   return item === 1
-}).length); */
+}).length); 
 
 
-/* //求整数num的数位之和
+//-----------------------------------------------------------------
+//求整数num的数位之和
 function getSum (num) {
   let sum = 0;
   if (num < 100) {
@@ -195,8 +197,10 @@ for (let x = 0; x < m; x++) {
   }
 }
 console.log(point);
- */
-/*
+
+
+
+//-----------------------------------------------------------------
 var line;
 while (line = readline()) {
   let h = parseInt(line);
@@ -235,9 +239,9 @@ function sum (n) {
   sn = sn + n;
   return sn;
 }
- */
 
-/* var line;
+//-----------------------------------------------------------------
+var line;
 while (line = readline()) {
   let h = parseInt(line);
 
@@ -248,16 +252,4 @@ while (line = readline()) {
       print(find(a, b, p, q, 0));
     }
   }
-} */
-
-var line = "sdweret"
-var len = line.length;
-var obj = {}
-var arr = [];
-for(let i = 0; i<len; i++){
-  arr.push(line.slice(i,i+1))
-}
- 
- function count(str){
-
- }
+} 
