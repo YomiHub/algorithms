@@ -11,15 +11,15 @@
  * }
  */
 
- var head = {
+var head = {
   val: 1,
   next: {
     val: 2,
     next: {
       val: 3,
-      next: null
-    }
-  }
+      next: null,
+    },
+  },
 }
 
 /**
@@ -27,17 +27,17 @@
  * @return {ListNode}
  */
 var reverseList = function (head) {
-  var pre = null;
+  var pre = null
   while (head) {
-    var next = head.next;
-    head.next = pre;
-    pre = head;
-    head = next;
+    var next = head.next
+    head.next = pre
+    pre = head
+    head = next
   }
-  return pre;
-};
+  return pre
+}
 
-console.log(reverseList(head));
+console.log(reverseList(head))
 
 /* 输入：head = [1,2]
 输出：[2,1]

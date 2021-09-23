@@ -1,4 +1,3 @@
-
 //-----------------------------------------------------------------
 //两两交换链表中的节点
 //给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。
@@ -15,15 +14,15 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
- var listNode = {
+var listNode = {
   val: 1,
   next: {
     val: 2,
     next: {
       val: 3,
-      next: null
-    }
-  }
+      next: null,
+    },
+  },
 }
 
 function swap(head) {
@@ -37,10 +36,10 @@ function swap(head) {
 }
 
 var swapPairs = function (head) {
-  return swap(head);
-};
+  return swap(head)
+}
 
-console.log(swapPairs(listNode));
+console.log(swapPairs(listNode))
 
 /* 输入：head = [1,2,3,4]
 输出：[2,1,4,3]
