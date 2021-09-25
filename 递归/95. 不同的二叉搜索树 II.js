@@ -4,39 +4,38 @@
 
 //找到不同的根，生成左右两个集合进行组合
 var generateTrees = function (n) {
-  if (n === 0) return [];
-  return generateTrees(1, n);
+  if (n === 0) return []
+  return generateTrees(1, n)
 
   function generateTrees(start, end) {
-    var res = [];
+    var res = []
     if (start > end) {
-      res.push(null);
-      return res;
+      res.push(null)
+      return res
     }
     for (var i = start; i <= end; i++) {
-      var left = generateTrees(start, i - 1);
-      var right = generateTrees(i + 1, end);
+      var left = generateTrees(start, i - 1)
+      var right = generateTrees(i + 1, end)
       for (var l = 0; l < left.length; l++) {
         for (var r = 0; r < right.length; r++) {
-          var node = new TreeNode(i);
-          node.left = left[l];
-          node.right = right[r];
-          res.push(node);
+          var node = new TreeNode(i)
+          node.left = left[l]
+          node.right = right[r]
+          res.push(node)
         }
       }
     }
-    return res;
+    return res
   }
-};
-
-
-function TreeNode(val) {
-  this.val = val;
-  this.left = this.right = null;
 }
 
-var arr1 = [1, 2, 2, 1], arr2 = [2, 2];
+function TreeNode(val) {
+  this.val = val
+  this.left = this.right = null
+}
 
+var arr1 = [1, 2, 2, 1],
+  arr2 = [2, 2]
 
 /* 
 示例 1：
