@@ -2,7 +2,7 @@
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
  * @LastEditors: Yomi
- * @LastEditTime: 2021-10-01 12:17:11
+ * @LastEditTime: 2021-10-07 22:57:00
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -58,6 +58,7 @@
 - 无重复字符的最长子串
 - 两数之和 II 
 - 验证回文串（双指针）
+- 长度最小的子数组
 
 </br>
 
