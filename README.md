@@ -1,3 +1,9 @@
+<!--
+ * @Author: Yomi
+ * @Date: 2021-09-02 23:56:37
+ * @LastEditors: Yomi
+ * @LastEditTime: 2021-10-01 12:17:11
+-->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
 - 队列：[2_Queue](https://github.com/YomiHub/algorithms/blob/master/2_Queue.js)
@@ -46,10 +52,12 @@
 
 </br>
 
-### 查找表（滑动窗口）
+### 查找表（双索引与滑动窗口）
 - 存在重复元素 II
 - 存在重复元素 III
 - 无重复字符的最长子串
+- 两数之和 II 
+- 验证回文串（双指针）
 
 </br>
 
