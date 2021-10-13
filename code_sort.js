@@ -2,12 +2,31 @@
  * @Des：常用的排序
  * @Author: Yomi
  * @Date: 2021-09-12 10:43:52
- * @LastEditors: Yomi
- * @LastEditTime: 2021-09-16 22:18:40
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-10-13 11:35:14
  */
 //----------------------------------------------
 var a = [13, 56, 78, 3, 2, 6, 4, 7];
 
+// 快排 平均情况：O(nlogn)
+const quickSort = function(arr){
+  var len = arr.length;
+  if(len<2){
+    return arr;
+  }
+
+  var left = [],right = [], mid = arr.splice(Math.floor(len/2),1)[0];
+  for(var i = 0; i < len-1; ++i){
+    if(arr[i]<=mid){
+      left.push(arr[i]);
+    }else{
+      right.push(arr[i]);
+    }
+  }
+  return quickSort(left).concat([mid],quickSort(right));
+}
+
+//----------------------------------------------
 //冒泡排序
 function bubbleSort(arr) {
   //反向循环，循环次数减少
