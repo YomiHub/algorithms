@@ -1,8 +1,8 @@
 <!--
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
- * @LastEditors: Yomi
- * @LastEditTime: 2021-10-07 22:57:00
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-11-05 17:49:14
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -59,8 +59,12 @@
 - 两数之和 II 
 - 验证回文串（双指针）
 - 长度最小的子数组
+- 最小覆盖子串
 
 </br>
+
+### 链表
+- LRU 缓存机制
 
 ### 数组算法
 - 移动零

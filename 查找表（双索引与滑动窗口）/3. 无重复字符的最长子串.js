@@ -47,6 +47,31 @@ var lengthOfLongestSubstring = function (s) {
   return max
 }
 
+// 推荐解法：滑动窗口
+// 定义left和right形成一个窗口，保证窗口中不出现重复字符
+var lengthOfLongestSubstring = function (s) {
+  let max = 0;
+  let n = s.length;
+  let left = 0;
+  let right = -1;
+  let freqMap = {};  //用于记录子串元素出现的频率
+
+  while(left<n){
+    let nextLetter = s[right+1];
+    if(!freqMap[nextLetter]&&nextLetter!=undefined){
+      //没有在子串重复
+      freqMap[nextLetter] = 1;
+      right++;
+    }else{
+      freqMap[s[left]] = 0;
+      left++;
+    }
+
+    max = Math.max(max,right-left+1)
+  }
+  return max;
+}
+
 var testStr = "pwwkew"
 console.log(lengthOfLongestSubstring(testStr)) //3
 
