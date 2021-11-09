@@ -2,7 +2,7 @@
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-11-08 18:02:14
+ * @LastEditTime: 2021-11-09 09:53:44
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -61,6 +61,7 @@
 - 长度最小的子数组
 - 最小覆盖子串
 - 找到字符串中所有字母异位词
+- 滑动窗口最大值
 
 </br>
 
