@@ -2,7 +2,7 @@
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-11-09 09:53:44
+ * @LastEditTime: 2021-11-10 16:19:26
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -76,6 +76,14 @@
 - 颜色分类
 - 数组中的第K个最大元素
 - 合并两个有序数组
+
+</br>
+
+### 栈和队列
+- 逆波兰表达式求值
+- 有效的括号
+- 简化路径
+- 二叉树的前序遍历
 
 </br>
 
