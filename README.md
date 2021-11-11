@@ -2,7 +2,7 @@
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-11-10 16:19:26
+ * @LastEditTime: 2021-11-11 18:12:39
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -67,6 +67,7 @@
 
 ### 链表
 - LRU 缓存机制
+- 反转链表 II （穿针引线、头插法）
 
 ### 数组算法
 - 移动零
@@ -84,6 +85,7 @@
 - 有效的括号
 - 简化路径
 - 二叉树的前序遍历
+- 二叉树的右视图
 
 </br>
 
