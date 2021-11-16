@@ -2,7 +2,7 @@
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-11-12 09:14:44
+ * @LastEditTime: 2021-11-16 20:56:06
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -69,6 +69,9 @@
 - LRU 缓存机制
 - 反转链表 II （穿针引线、头插法）
 - 删除链表中的节点（不能访问头节点、已知头节点）
+- 删除链表的倒数第 N 个结点
+- 两数相加
+- 移除链表元素
 
 ### 数组算法
 - 移动零

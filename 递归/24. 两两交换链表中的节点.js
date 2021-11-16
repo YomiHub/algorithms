@@ -39,6 +39,24 @@ var swapPairs = function (head) {
   return swap(head)
 }
 
+
+// 通过迭代方式实现，先创建哑结点 dummyHead，令 dummyHead.next = head
+var swapPairs = function(head) {
+  let dummy = new ListNode(0);
+  dummy.next = head;
+  let curr = dummy;
+  //后面没有节点或者只有一个节点
+  while(curr.next!=null&&curr.next.next!=null){
+    let temp1 = curr.next;
+    let temp2 = curr.next.next;
+    curr.next = temp2;  // 互换后记得连接前驱节点
+    temp1.next = temp2.next;
+    temp2.next = temp1;
+    curr = temp1;
+  }
+  return dummy.next;
+};
+
 console.log(swapPairs(listNode))
 
 /* 输入：head = [1,2,3,4]
