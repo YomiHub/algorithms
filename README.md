@@ -2,7 +2,7 @@
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-11-16 20:56:06
+ * @LastEditTime: 2021-11-19 20:37:29
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -62,6 +62,7 @@
 - 最小覆盖子串
 - 找到字符串中所有字母异位词
 - 滑动窗口最大值
+- 通过删除字母匹配到字典里最长单词(贪心算法)
 
 </br>
 
