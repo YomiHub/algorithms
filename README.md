@@ -2,7 +2,7 @@
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-11-23 17:53:01
+ * @LastEditTime: 2021-11-25 13:52:37
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -66,6 +66,9 @@
 - 滑动窗口最大值
 - 通过删除字母匹配到字典里最长单词(贪心算法)
 - 面试题 17.15. 最长单词(排序后去重，单词划分的动态规划)
+- 分发饼干(排序后贪心算法)
+- 判断子序列(双指针匹配字符)
+- 搜索二维矩阵
 
 </br>
 
