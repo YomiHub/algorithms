@@ -38,6 +38,47 @@ var maxDepth = function (root) {
   }
 }
 
+//DFS
+var maxDepth = function(root){
+  let max = 0;
+
+  let dfs = (node,depth)=>{
+    if(!node) return;
+    max = Math.max(max,depth);
+
+    if(node.left){dfs(node.left,depth+1)}
+    if(node.right){dfs(node.right,depth+1)}
+  }
+
+  dfs(root,1);
+  return max;
+}
+
+//BFS
+var maxDepth = function (root) {
+  if (root === null) return 0;
+  let queue = [root];
+  let max = 0;
+
+  while(queue.length){
+    ++max;
+    let levelLen = queue.length;
+
+    while(levelLen--){
+      let node = queue.shift();
+      if(node.left){
+        queue.push(node.left);
+      }
+
+      if(node.right){
+        queue.push(node.right);
+      }
+    }
+  }
+  return max;
+}
+
+//BFS
 var maxDepth = function (root) {
   if (root === null) return 0
   let depth = 1

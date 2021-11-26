@@ -2,7 +2,7 @@
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-11-26 11:26:15
+ * @LastEditTime: 2021-11-26 17:55:07
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -110,6 +110,11 @@
 </br>
 
 ### BFS
+- 相同的树(DFS递归解法、BFS解法)
+- 二叉树的层序遍历（核心遍历模板）
+  - DFS使用变量level记录所在的层，递归遍历时根据level将节点push到对应层的数组中;
+  - BFS循环队列，while给每层开一个for循环，遍历同层节点
+- 
 
 </br>
 
