@@ -2,7 +2,7 @@
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-11-25 13:52:37
+ * @LastEditTime: 2021-11-26 11:06:40
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -51,6 +51,7 @@
 - 回旋镖的数量
 - 直线上最多的点数
 - 和为 K 的子数组(前缀和+哈希表)
+- 最接近的三数之和(排序后使用双指针取三个数的和)
 
 </br>
 
