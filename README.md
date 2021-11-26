@@ -2,7 +2,7 @@
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-11-26 11:06:40
+ * @LastEditTime: 2021-11-26 11:26:15
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -15,7 +15,7 @@
 
 </br>
 
-### 递归
+### 递归与回溯
 - 反转字符串
 - 两两交换链表中的节点
 - 杨辉三角
@@ -27,6 +27,14 @@
 - 合并两个有序链表
 - 第K个语法符号
 - 不同的二叉搜索树
+
+</br>
+
+### 贪心算法
+
+</br>
+
+### 动态规划
 
 </br>
 
@@ -98,6 +106,18 @@
 - 简化路径
 - 二叉树的前序遍历
 - 二叉树的右视图
+
+</br>
+
+### BFS
+
+</br>
+
+### DFS
+
+</br>
+
+### 二叉树
 
 </br>
 
