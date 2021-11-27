@@ -32,6 +32,33 @@
   return stack.length > 0 ? false : true
 }
 
+//推荐解法：如果进来的是右边符号，就查看栈顶是否匹配
+
+var isValid = function (s) {
+  let slen = s.length
+  if (slen % 2 !== 0) return false
+
+  let stack = [];
+  let match = {
+    ")": "(",
+    "}": "{",
+    "]": "["
+  }
+
+  for(let i = 0; i<slen; ++i){
+    let item = s[i];
+    if(!match[item]){
+      //左匹配符号
+      stack.push(item);
+    }else{
+      if(stack.length==0||match[item]!=stack.pop()){
+        return false;
+      }
+    }
+  }
+  return stack.length>0?false:true;
+}
+
 console.log(isValid("()[]{}"))
 
 /* 

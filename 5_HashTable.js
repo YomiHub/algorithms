@@ -2,10 +2,11 @@
  * @Author: Yomi
  * @Date: 2021-09-12 10:33:49
  * @LastEditors: Yomi
- * @LastEditTime: 2021-09-12 10:33:50
+ * @LastEditTime: 2021-11-27 17:39:32
  */
 
 //哈希表-----------------------------------------------------
+// 解决哈希碰撞：拉链（同一个位置，用链表存储）
 function HashTable() {
   this.storage = [];
   this.count = 0;  //已经存在了多少数据.
