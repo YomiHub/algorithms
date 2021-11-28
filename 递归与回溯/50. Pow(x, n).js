@@ -32,6 +32,30 @@ var myPow = function (x, n) {
   return myPow(x * x, n / 2)
 }
 
+//快速幂+迭代：指数都是 2 的幂次，这是因为每个额外乘的 x 在之后都会被平方若干次
+var myPow = function (x, n) {
+  // 非递归写法
+  if (n < 0) {
+    x = 1 / x
+    n = -n
+  }
+  if (n === 0) return 1
+
+  let res = 1
+  while (n > 0) {
+    //如果 N 二进制表示的最低位为 1，那么需要计入贡献
+    if (n & 1) {
+      // 按位与 n & 1等价于 n%2===1
+      n--
+      res *= x // 将x^n 转变为 x*x^(n-1)
+    }
+    x *= x // 将贡献不断地平方
+    n = n / 2
+    // n = n >>> 1; 无符号右移运算符
+  }
+  return res
+}
+
 //方法三：暴力循环
 var myPow = function (x, n) {
   var result = 1
