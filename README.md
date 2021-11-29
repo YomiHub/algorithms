@@ -2,7 +2,7 @@
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
  * @LastEditors: Yomi
- * @LastEditTime: 2021-11-28 22:06:29
+ * @LastEditTime: 2021-11-30 00:10:54
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -28,6 +28,8 @@
 - 第K个语法符号
 - 不同的二叉搜索树
 - 括号生成（递归和回溯）
+- 单词搜索
+- 单词搜索 II（回溯+字典树）
 
 </br>
 
@@ -137,6 +139,9 @@
 - 二叉搜索树的最近公共祖先
 
 </br>
+
+### 位运算
+- 位1的个数
 
 ### 更多
 > [更多前端学习笔记](https://github.com/YomiHub/learning-code)
