@@ -2,7 +2,7 @@
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
  * @LastEditors: Yomi
- * @LastEditTime: 2021-11-30 00:10:54
+ * @LastEditTime: 2021-11-30 23:27:04
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -130,7 +130,7 @@
 
 ### DFS
 - 二叉树的最小深度（分治DFS）
-- N皇后（DFS）
+- N皇后（DFS、位运算！！！）
 
 </br>
 
@@ -142,6 +142,8 @@
 
 ### 位运算
 - 位1的个数
+- 2的幂
+- 比特位计数
 
 ### 更多
 > [更多前端学习笔记](https://github.com/YomiHub/learning-code)
