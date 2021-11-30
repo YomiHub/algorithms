@@ -2,7 +2,7 @@
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
  * @LastEditors: Yomi
- * @LastEditTime: 2021-11-30 23:27:04
+ * @LastEditTime: 2021-11-30 23:52:13
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -34,6 +34,7 @@
 </br>
 
 ### 贪心算法
+> 每一次都取当前最优解
 - 买卖股票的最佳时机 II
 
 </br>
@@ -140,7 +141,12 @@
 
 </br>
 
+### 并查集
+> x.parent = x 初始化的时候就是指向自己roots[i] = i;（1）小弟、老大关系；（2）帮派识别、（3）优化方式：降低链的深度rank（将rank小的合并到rank大的）、进行路径压缩
+- 岛屿数量
+
 ### 位运算
+> X&(X-1)：去掉最低位的1；x&-x：返回最低位1所在
 - 位1的个数
 - 2的幂
 - 比特位计数
