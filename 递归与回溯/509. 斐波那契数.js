@@ -33,6 +33,33 @@ function fibCal(n, obj) {
   return result
 }
 
+//未优化的解法
+var fib = function (n) {
+  if(n==0) return 0;
+  if(n==1) return 1;
+  return fib(n-1)+fib(n-2); //递归进行了大量重复计算，指数级增加
+}
+
+//已经知道递推公式可以直接正向求解
+var fib = function(n){
+  let arr = new Array(n);
+  arr[0] = 0;
+  arr[1] = 1;
+
+  for(let i = 2; i<=n; ++i){
+    arr[i] = arr[i-1]+arr[i-2];
+  }
+  return arr[n];
+}
+
+
+//最优解法：矩阵相乘,乘以一个常数矩阵
+//| fn  | = |1 1| |fn-1|
+//| fn-1| = |1 0| |fn-2|
+
+//化简之后就是n-1个常数矩阵相乘，最后乘以1；即 y = x^k
+
+
 /* 示例 1：
 输入：2
 输出：1

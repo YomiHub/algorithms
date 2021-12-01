@@ -1,8 +1,8 @@
 <!--
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-12-01 18:12:13
+ * @LastEditors: Yomi
+ * @LastEditTime: 2021-12-01 22:22:08
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -14,6 +14,15 @@
 - 图：[7_Grapha](https://github.com/YomiHub/algorithms/blob/master/7_Grapha.js)
 
 </br>
+
+### 关于算法的六个重要模板，以及位运算常用的几个方式
+- （1）递归：递归终止条件、当前循环任务、进入下一层循环、根据需要恢复成递归前的状态（参考N皇后）；
+- （2）DFS：访问记录visited、for循环当前处理状态且没有访问过则递归（参考跳跃游戏 III）；
+- （3）BFS：创建queue=[root]、循环队列、pop结点并用visited做访问记录、将下一结点push到队列；
+- （4）二分查找：left=0,right=len-1、当left<=right进入循环，取mid=Math.floor((left+right)/2)、根据当前值与目标值的大小，调整便捷left=mid+1还是right=mid-1；
+- （5）并查集：构造函数定义parent和rank以及初始化集合数count、方法findRoot找到结点的根，即while(this.parent[x]!=x)、union将结点合并、rank判断将短的合并到长的，更改parent和rank以及count--
+- （6）动态规划:定义初始状态矩阵、循环矩阵更改状态、返回最优解（一般在开头或者结尾）
+- （7）位运算：用x&1==1或者==0判断奇偶（等同于x%2==1）、x=x&(x-1)将最低位的1重置为0、x&-x的结果取得最低位的1
 
 ### 递归与回溯
 - 反转字符串
@@ -125,7 +134,8 @@
 - 二叉树的层序遍历（核心遍历模板）
   - DFS使用变量level记录所在的层，递归遍历时根据level将节点push到对应层的数组中;
   - BFS循环队列，while给每层开一个for循环，遍历同层节点
-- 
+- 跳跃游戏 III
+- 跳跃游戏 IV
 
 </br>
 
