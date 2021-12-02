@@ -2,7 +2,7 @@
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
  * @LastEditors: Yomi
- * @LastEditTime: 2021-12-02 21:47:44
+ * @LastEditTime: 2021-12-02 21:55:40
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -145,6 +145,7 @@
 - N皇后（DFS、位运算！！！）
 - 路径总和 II
 - 对称二叉树
+- 平衡二叉树
 
 </br>
 
