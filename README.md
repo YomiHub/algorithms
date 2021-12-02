@@ -2,7 +2,7 @@
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
  * @LastEditors: Yomi
- * @LastEditTime: 2021-12-01 22:22:08
+ * @LastEditTime: 2021-12-02 21:47:44
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -49,6 +49,7 @@
 </br>
 
 ### 动态规划
+> (1)递归+记忆化->递推  (2)状态的定义：opt[n]、dp[n]、fib[n]  (3)状态转移方程： opt[n] = best_of(opt[n-1],opt[n-2],...)   (4)最优子结构
 
 </br>
 
