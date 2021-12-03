@@ -17,13 +17,24 @@ function climbCal(n, obj) {
   } else if (n == 2) {
     result = 2
   } else {
-    // 最后一步有两种：爬1个阶梯或两个；
+    // 最后一步有两种：爬1个阶梯或两个（回溯：从终点往前看）
     // 到达这两个倒数第二步的方法个数和，即为到达最后一步的方法个数
     result = climbCal(n - 1, obj) + climbCal(n - 2, obj) //斐波那契
   }
 
   obj[n] = result
   return result
+}
+
+//DP 动态规划
+var climbStairs = function (n) {
+  if(n == 0 || n==1 ||n==2) return n;  // n<=2
+  let arr = new Array(n);
+  arr[0] = 0; arr[1] = 1;  //也可以只用三个变量，前两个的值和总值
+  for(let i = 2; i<n; ++i){
+    arr[i] = arr[i-1]+arr[i-2];
+  } 
+  return arr[n-1];
 }
 
 console.log(climbStairs(5))
