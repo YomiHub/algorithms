@@ -2,7 +2,7 @@
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
  * @LastEditors: Yomi
- * @LastEditTime: 2021-12-04 12:15:21
+ * @LastEditTime: 2021-12-09 22:00:44
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -125,6 +125,7 @@
 - 颜色分类
 - 数组中的第K个最大元素
 - 合并两个有序数组
+- 剑指 Offer 40. 最小的k个数（快排思想）
 
 </br>
 
