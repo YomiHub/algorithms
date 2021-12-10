@@ -26,6 +26,26 @@ var merge = function (intervals) {
   return res;
 }
 
+//排序后根据y大小冒泡查找可以合并的区间
+var merge = function(intervals) { 
+  intervals = intervals.sort((a,b)=> a[0] - b[0]);
+  let i = 0;
+  let max;
+  let target = [];
+  while(i<intervals.length) {
+      let j = i + 1;
+      max = intervals[i][1];
+      //待插入区间的y要大于比较的x
+      while(intervals[j] && max>=intervals[j][0] && j < intervals.length) {
+          max = Math.max(max, intervals[j][1]);
+          j++;
+      }
+      target.push([intervals[i][0], max]);
+      i = j;  //跳到已经合并的index
+  }
+  return target;
+};
+
 // 自己的辣鸡暴力解法（没有排序直接合并）
 function needMerge(arr1, arr2) {
   let [x1, y1] = arr1
