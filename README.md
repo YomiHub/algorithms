@@ -2,7 +2,7 @@
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-12-10 10:59:53
+ * @LastEditTime: 2021-12-10 19:48:09
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -87,6 +87,8 @@
 - 直线上最多的点数
 - 和为 K 的子数组(前缀和+哈希表)
 - 最接近的三数之和(排序后使用双指针取三个数的和)
+- N数之和(三数之和、四数之和的通用封装)
+- 合并区间（排序后比较合并相邻区间）
 
 </br>
 
@@ -126,6 +128,8 @@
 - 数组中的第K个最大元素
 - 合并两个有序数组
 - 剑指 Offer 40. 最小的k个数（快排思想）
+- 字符串相加（竖式相加）
+- 大数添加千分位
 
 </br>
 
