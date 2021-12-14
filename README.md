@@ -1,8 +1,8 @@
 <!--
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-12-10 19:48:09
+ * @LastEditors: Yomi
+ * @LastEditTime: 2021-12-14 23:58:36
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -39,6 +39,7 @@
 - 括号生成（递归和回溯）
 - 单词搜索
 - 单词搜索 II（回溯+字典树）
+- 全排列 （DFS回溯）
 
 </br>
 
