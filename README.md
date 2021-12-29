@@ -1,8 +1,8 @@
 <!--
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
- * @LastEditors: Yomi
- * @LastEditTime: 2021-12-19 01:44:04
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-12-29 16:05:47
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -177,6 +177,9 @@
 ### 二叉树
 - 验证二叉搜索树
 - 二叉搜索树的最近公共祖先
+- 从前序与中序遍历序列构造二叉树（DFS）
+- 从中序与后序遍历序列构造二叉树（DFS）
+- 根据parentId生成树结构
 
 </br>
 
