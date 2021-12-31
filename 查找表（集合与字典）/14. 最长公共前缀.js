@@ -28,6 +28,26 @@ var longestCommonPrefix = function (strs) {
   return prefix
 }
 
+// 横向递归写法
+var longestCommonPrefix = function (strs) {
+  let len = strs.length;
+  if(!len) return "";
+  
+  let findPrefix = (prefix,index)=>{
+    if(index>=len) return prefix;
+    
+    let j = 0;
+    let str = strs[index];
+    let max = Math.min(prefix.length,str.length);
+    while(j<max && prefix[j]==str[j]){
+      j++;
+    }
+    return findPrefix(prefix.substring(0,j),index+1);
+  }
+
+  return findPrefix(strs[0],1);
+}
+
 //纵向扫描：从前往后遍历所有字符串的每一列，比较相同列上的字符是否相同
 //直到遍历的字符长为前缀index（字符结束）||或者字符与前缀index对应值不等时
 var longestCommonPrefix = function (strs) {
