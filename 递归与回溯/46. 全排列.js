@@ -29,3 +29,36 @@
 }
 
 console.log(permute([1,2,3]))
+
+
+// 数组指定元素个数的排列
+// 输入：[1, 2, 3]  2
+// 输出：[[1, 2], [1, 3], [2, 1], [2, 3], [3, 1], [3, 2]]
+function Permutations(arr, size) {
+  var origin = [];
+  var res = []
+  function getArrange(arr, count, ret) {
+    if (count === 1) {
+      for (var i = 0; i < arr.length; i++) {
+        var tmp = ret.slice();
+        tmp.push(arr[i]);//剩余的数依次插入该数的组合
+        res.push(tmp);
+      }
+    } else {
+      count -= 1;
+      for (var i = 0; i < arr.length; i++) {
+        var tmp = ret.slice();
+        var newTarget = arr.slice();
+        tmp.push(arr[i]);  //从数组中取出一个数
+        newTarget.splice(i, 1);
+        getArrange(newTarget, count, tmp);
+      }
+    }
+  }
+  getArrange(arr, size, origin);
+  return res;
+}
+console.log(JSON.stringify(Permutations([1, 2, 3], 2)));
+//在node-v12.10.0环境下，直接[1,2,3].Array原型方法 调用会报错
+
+//输出：[[1,2],[1,3],[2,1],[2,3],[3,1],[3,2]]
