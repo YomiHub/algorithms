@@ -2,7 +2,7 @@
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-12-29 16:05:4
+ * @LastEditTime: 2022-01-06 19:39:48
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -137,6 +137,7 @@
 - 字符串相加（竖式相加）
 - 字符串相乘（竖式计算、做乘法）
 - 大数添加千分位
+- 寻找两个正序数组的中位数
 
 </br>
 
@@ -170,7 +171,7 @@
 - 平衡二叉树
 - 二叉树的所有路径
 - 求根节点到叶子节点数字之和
-- 路径总和 III (待补充)
+- 路径总和 III 
 
 </br>
 
@@ -180,6 +181,7 @@
 - 从前序与中序遍历序列构造二叉树（DFS）
 - 从中序与后序遍历序列构造二叉树（DFS）
 - 根据parentId生成树结构
+- 删除二叉搜索树中的节点
 
 </br>
 
