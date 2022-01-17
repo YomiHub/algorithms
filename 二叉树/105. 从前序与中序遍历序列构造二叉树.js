@@ -13,7 +13,7 @@
  * @param {number[]} inorder
  * @return {TreeNode}
  */
-// 前序遍历是:根左右、中序遍历是:左右根
+// 前序遍历是:根左右、中序遍历是:左根右
 // DFS解法
 var buildTree = function (preorder, inorder) {
   let len = inorder.length;
