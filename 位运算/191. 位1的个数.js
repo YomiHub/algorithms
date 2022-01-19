@@ -14,7 +14,8 @@ var hammingWeight = function (n) {
   let len = 0
   while (n) {
     len++
-    n = n & (n - 1)
+    //当我们将整数减去 1 时，最右边的一位 1 变为 0，它后面的所有位都取反，因此将减一后的值与原值相与，我们就会能够消除最右边的一位 1
+    n = n & (n - 1) 
   }
   return len
 }
