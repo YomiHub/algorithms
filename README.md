@@ -2,7 +2,7 @@
  * @Author: Yomi
  * @Date: 2021-09-02 23:56:37
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-01-18 16:33:44
+ * @LastEditTime: 2022-02-12 10:00:14
 -->
 ### 关于数据结构
 - 栈：[1_Stack](https://github.com/YomiHub/algorithms/blob/master/1_Stack.js)
@@ -183,6 +183,7 @@
 - 从中序与后序遍历序列构造二叉树（DFS）
 - 根据parentId生成树结构
 - 删除二叉搜索树中的节点
+- 将有序数组转换为二叉搜索树
 
 </br>
 
