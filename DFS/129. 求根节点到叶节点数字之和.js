@@ -101,3 +101,20 @@ var sumNumbers = function (root) {
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/sum-root-to-leaf-numbers
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。 */
+
+// 纯计算路径总和
+function sumOfPaths(root) {
+  const pathSum = (node, currentSum) => {
+    if (node === null) return 0 // Base case: if the node is null, return 0
+
+    currentSum += node.val // Add the current node's value to the path sum
+
+    if (node.left === null && node.right === null) {
+      return currentSum
+    }
+
+    return pathSum(node.left, currentSum) + pathSum(node.right, currentSum)
+  }
+
+  return pathSum(root, 0)
+}
